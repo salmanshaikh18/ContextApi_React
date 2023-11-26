@@ -1,9 +1,15 @@
 import React from 'react'
 import './App.css'
+import Login from './components/Login'
+import Profile from './components/Profile'
+import UserContextProvider from './contexts/UserContextProvider'
 
 const App = () => {
   return (
-    <div>App</div>
+    <UserContextProvider>
+      <Login />
+      <Profile />
+    </UserContextProvider>
   )
 }
 
