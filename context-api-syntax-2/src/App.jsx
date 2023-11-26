@@ -7,7 +7,7 @@ import { UserContextProvider } from './contexts/User'
 
 const App = () => {
 
-  const [user, setUser] = useState('')
+  const [user, setUser] = useState(null)
 
   return (
     <UserContextProvider value={{user, setUser}}>

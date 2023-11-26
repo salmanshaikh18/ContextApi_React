@@ -1,13 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
+import { useUser } from '../contexts/User'
 
 const Login = () => {
 
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
 
+  const {setUser} = useUser()
+
   const handleSubmitBtn = (e) => {
     e.preventDefault()
+    setUser({userName, password})
   }
 
   return (
